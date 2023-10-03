@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="TableCRUDTask.css">
+</head>
+
+<body>
+    <div>
+        <h1>
+            <center>Employee</center>
+        </h1>
+        <div class="formBox">
+            <div class="headBox">
+                <h3>Add Employee</h3>
+            </div>
+            <div class="regForm">
+                <form id="empForm" onsubmit="addEmployee();return false">
+                    <div class="formRow">
+                        <div class="formLable">
+                            <label class="inputLable" for="name">Name:</label>
+                        </div>
+                        <div class="formField">
+                            <input type="text" name="name" id="name" placeholder="enter name " autocomplete="name"
+                                minlength="4" maxlength="20" required>
+                            <span class="message" id="nameValidate"></span>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <label class="inputLable" for="gender">Gender:</label>
+                        </div>
+                        <div class="formField">
+                            <input type="radio" value="Male" name="gender" id="male" checked>
+                            <label for="male">Male</label>
+                            <input type="radio" value="Female" name="gender" id="female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <label class="inputLable" for="dob">Date of Birth:</label>
+                        </div>
+                        <div class="formField">
+                            <input type="date" name="dob" id="dob" max="2023-09-30"
+                                placeholder="enter dob as MM/dd/yyyy " required>
+                            <span class="message" id="dateValidate"></span>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <label class="inputLable" for="email">Email:</label>
+                        </div>
+                        <div class="formField">
+                            <input type="email" name="email" id="email" placeholder="enter email" required>
+                            <span class="message" id="emailValidate"></span>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <label class="inputLable" for="mobile">Phone:</label>
+                        </div>
+                        <div class="formField">
+                            <input type="text" name="mobile" id="mobile" maxlength="10" pattern="\d{10}"
+                                placeholder="enter mobile ">
+                            <span class="message" id="mobileValidate"></span>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <label class="inputLable" for="hobby">Hobbies:</label>
+                        </div>
+                        <div class="formField">
+                            <input type="checkbox" name="hobby" id="cricket" value="cricket"
+                                placeholder="enter city "><label for="cricket">Cricket</label>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <!-- <label class="inputLable" for="hobby"></label> -->
+                        </div>
+                        <div class="formField">
+                            <input type="checkbox" name="hobby" id="chess" value="chess"
+                                placeholder="enter city "><label for="chess">Chess</label>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <!-- <label class="inputLable" for="hobby"></label> -->
+                        </div>
+                        <div class="formField">
+                            <input type="checkbox" name="hobby" id="music" value="music"
+                                placeholder="enter city "><label for="music">Music</label>
+                        </div>
+                    </div>
+                    <div class="formRow">
+                        <div class="formLable">
+                            <!-- <label class="inputLable" for="submit"></label> -->
+                        </div>
+                        <div class="formField">
+                            <button type="submit" value="Submit" id="submitButton">Submit</button>&nbsp;&nbsp;
+                            <button type="reset" value="Reset" id="resetButton" style="display: none;">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ............................Basic..................................... -->
+    <div>
+        <h1>
+            <center>Basic</center>
+        </h1>
+        <div class="rowListBox">
+            <div class="headBox">
+                <h3>Display</h3>
+            </div>
+            <div class="rowListTable">
+                <table class="listInRow" id="empListInRow" border="1" width="80%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>DOB</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Hobbies</th>
+                            <th colspan="2">EDIT OPTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- employee list here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- ..........................Advanced.................................... -->
+    <div>
+        <h1>
+            <center>Advanced</center>
+        </h1>
+        <div class="columnListBox">
+            <div class="headBox">
+                <h3>Display</h3>
+            </div>
+            <div class="columnListTable">
+                <table class="listInColumn" id="empListInColumn" border="1" width="80%">
+                    <tbody>
+                        <tr id="nameColumn">
+                            <th>Name</th>
+                        </tr>
+                        <tr id="genderColumn">
+                            <th> Gender</th>
+                        </tr>
+                        <tr id="dobColumn">
+                            <th>DOB</th>
+                        </tr>
+                        <tr id="emailColumn">
+                            <th>Email</th>
+                        </tr>
+                        <tr id="mobileColumn">
+                            <th>Phone</th>
+                        </tr>
+                        <tr id="hobbyColumn">
+                            <th>Hobbies</th>
+                        </tr>
+                        <tr id="editColumn">
+                            <th rowspan="">EDIT OPTIONS</th>
+                        </tr>
+                        <tr id="deleteColumn">
+                            <th>EDIT OPTIONS</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="TableCRUDTask.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <!-- <link rel="stylesheet" href="TableCRUDTask.css"> -->
+</head>
+
+<body>
+    <div>
+        <h1>
+            <center>Employee</center>
+        </h1>
+        <div class="formBox">
+            <div class="headBox">
+                <h3>Add Employee</h3>
+            </div>
+            <div class="regForm">
+                <form id="empForm" >
+                    <div>
+                        <table>
+    
+                            <tr>
+                                <td class="inputLable">Name:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><input type="text" name="name" id="name" placeholder="enter name "
+                                        autocomplete="name"></td>
+                                <span class="message" id="nameValidate"></span>
+                            </tr>
+                            <tr>
+                                <td class="inputLable">Gender:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><input type="radio" value="Male" name="gender" id="male" checked>Male<input
+                                        type="radio" value="Female" name="gender" id="female" required>Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class=" inputLable">Date of Birth:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><input type="date" name="dob" id="dob" max="2023-09-30"
+                                        placeholder="enter dob as MM/dd/yyyy " required>
+                                </td>
+                                <span class="message" id="dateValidate"></span>
+                            </tr>
+                            <tr>
+                                <td class="inputLable">Email:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><input type="email" name="email" id="email" placeholder="enter email "
+                                        autocomplete="email" required>
+                                </td>
+                                <span class="message" id="emailValidate"></span>
+                            </tr>
+                            <tr>
+                                <td class="inputLable">Phone:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><input type="text" name="mobile" id="mobile" maxlength="10" pattern="\d{10}"
+                                        placeholder="enter mobile ">
+                                </td>
+                                <span class="message" id="mobileValidate"></span>
+                            </tr>
+                            <tr>
+                                <td class="inputLable">Hobbies:&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><input type="checkbox" name="hobby" id="cricket" value="cricket"
+                                        placeholder="enter city ">Cricket</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="checkbox" name="hobby" id="chess" value="chess"
+                                        placeholder="enter city ">Chess</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="checkbox" name="hobby" id="music" value="music"
+                                        placeholder="enter city ">Music</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <button type="submit" value="Submit" id="submitButton" onclick="addEmployee();return false" >Submit</button>&nbsp;&nbsp;
+                                    <button type="reset" value="Reset" id="resetButton" style="display: none;" >Reset</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ............................Basic..................................... -->
+    <div>
+        <h1>
+            <center>Basic</center>
+        </h1>
+        <div class="rowListBox">
+            <div class="headBox">
+                <h3>Display</h3>
+            </div>
+            <div class="rowListTable">
+                <table class="listInRow" id="empListInRow" border="1" width="80%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>DOB</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Hobbies</th>
+                            <th colspan="2">EDIT OPTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- employee list here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- ..........................Advanced.................................... -->
+    <div>
+        <h1>
+            <center>Advanced</center>
+        </h1>
+        <div class="columnListBox">
+            <div class="headBox">
+                <h3>Display</h3>
+            </div>
+            <div class="columnListTable">
+                <table class="listInColumn" id="empListInColumn" border="1" width="80%">
+                    <tbody>
+                        <tr id="nameColumn">
+                            <th>Name</th>
+                        </tr>
+                        <tr id="genderColumn">
+                            <th> Gender</th>
+                        </tr>
+                        <tr id="dobColumn">
+                            <th>DOB</th>
+                        </tr>
+                        <tr id="emailColumn">
+                            <th>Email</th>
+                        </tr>
+                        <tr id="mobileColumn">
+                            <th>Phone</th>
+                        </tr>
+                        <tr id="hobbyColumn">
+                            <th>Hobbies</th>
+                        </tr>
+                        <tr id="editColumn"  >
+                            <th rowspan="" >EDIT OPTIONS</th>
+                        </tr>
+                        <tr id="deleteColumn"  >
+                            <th>EDIT OPTIONS</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="TableCRUDTask.js"></script> -->
+</body>
+
+</html>
